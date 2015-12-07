@@ -1,7 +1,33 @@
+<!DOCTYPE html>
 <html>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <body>
-        <div id="legend"></div>
-        <canvas id="canvas"></canvas>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Flat surface shader</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" type="text/javascript" src="p5.js"></script>
+    <script language="javascript" type="text/javascript" src="p5.sound.js"></script>
+    <script src="js/dataGet.js"></script>
+    <!--<script type='text/javascript' src="p5.dom.js"></script>-->
+</head>
+<body>
+<div id="container" class="container" style=" z-index:-14;">
+        <div id="output" class="container" style=" z-index:-14;">
+        <script src="js/index.js"></script>
+    </div>
+</div>
+</body>
+<script src="js/sketch.js"></script>
+<script>
+    var responses = [];
+    var devices = [2081286,2729663,2260031,1983097];
+    devices.forEach(function(deviceid){
+      getDeviceData(deviceid);
+    });
+    console.log(responses); //FIXME eliminate when in production
+</script>
 </html>
+<!--
+<div style="background-color:yellow; width:300px; height:100px; position:relative; top:-60px; left:35px; z-index:1;">
+</div>
+<!--<script language="javascript" type="text/javascript" src="p5.js"></script>-->
+<!--<script type='text/javascript' src="p5.dom.js"></script>-->
